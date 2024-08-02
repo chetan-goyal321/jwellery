@@ -1,0 +1,82 @@
+/* Nav.css */
+
+/* General styles for the navbar */
+*{margin: 0;
+padding: 0;}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d22abb; /* Deep blue for a professional look */
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand .navbar-logo {
+    font-size: 1.6em;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-menu .navbar-link {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+  }
+  
+  .navbar-menu .navbar-link:hover {
+    background-color: #090708; /* Slightly darker blue on hover */
+    color: #e0e0e0; /* Light gray text on hover */
+  }
+  
+  /* Toggle button for mobile view */
+  .navbar-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .toggle-icon {
+    font-size: 1.5em;
+    color: #ffffff;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #d22abb; /* Match background color in mobile view */
+      position: absolute;
+      top: 50px; /* Adjust based on navbar height */
+      left: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-menu .navbar-link {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #003bb5; /* Border for separation */
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  }
+  
